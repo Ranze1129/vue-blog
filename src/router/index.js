@@ -1,27 +1,66 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import Router from 'vue-router'
+import store from '../store'
 
-Vue.use(VueRouter)
 
-const routes = [
-  {
-    path: '/',
-    name: 'home',
-    component: HomeView
-  },
-  {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
-]
+Vue.use(Router)
 
-const router = new VueRouter({
-  routes
+const router =  new Router({
+  routes: [
+    {
+      path: '/',
+      component: () => import('@/pages/Index/template.vue')
+    },
+    {
+      path: '/login',
+      component: () => import('@/pages/Login/template.vue')
+    },
+    {
+      path: '/detail/:blogId',
+      component: () => import('@/pages/Detail/template.vue')
+    },
+    {
+      path: '/edit/:blogId',
+      component: () => import('@/pages/Edit/template.vue'),
+      meta: { requiresAuth: true }
+    },
+    {
+      path: '/create',
+      component: () => import('@/pages/Create/template.vue'),
+      meta: { requiresAuth: true }
+    },
+    {
+      path: '/user/:userId',
+      component: () => import('@/pages/User/template.vue')
+    },
+    {
+      path: '/my',
+      component: () => import('@/pages/My/template.vue'),
+      meta: { requiresAuth: true }
+    },
+    {
+      path: '/register',
+      component: () => import('@/pages/Register/template.vue')
+    }
+  ]
 })
+
+router.beforeEach((to, from, next) => {
+  if (to.matched.some(record => record.meta.requiresAuth)) {
+    store.dispatch('checkLogin').then(isLogin => {
+      if (!isLogin) {
+        next({
+          path: '/login',
+          query: {redirect: to.fullPath}
+        })
+      } else {
+        next()
+      }
+    })
+  } else {
+    next() // 确保一定要调用 next()
+  }
+})
+
 
 export default router

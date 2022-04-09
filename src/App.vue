@@ -48,7 +48,7 @@ export default {
   padding-right: 12%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
   #app{
     grid-template-columns: 10px auto 10px;
     #header,#footer{

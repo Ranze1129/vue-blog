@@ -32,7 +32,6 @@ export default {
   grid-template-areas: "header header header"
                        ".      main   ."
                        "footer footer footer";
-;
 }
 #header{
   grid-area:header;

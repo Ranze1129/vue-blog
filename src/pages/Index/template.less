@@ -48,6 +48,20 @@
     display: grid;
     justify-items: center ;
     margin-bottom: 30px;
+
+  }
+  ::v-deep{
+    .pagination{
+      .el-pager li{
+        &.active{
+          color: @themeColor;
+        }
+        &:hover {
+          color: #0acd0a;
+        }
+      }
+
+    }
   }
 
 }

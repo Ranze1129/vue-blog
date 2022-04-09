@@ -10,7 +10,7 @@ export default {
     }
   },
   created() {
-    this.page = parseInt(this.$route.query.page) ||1
+    this.page = parseInt(this.$route.query.page) || 1
     blog.getIndexBlogs({page:this.page}).then(res => {
       this.blogs = res.data
       this.total = res.total

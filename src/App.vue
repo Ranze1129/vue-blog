@@ -33,7 +33,7 @@ export default {
                        ".      main   ."
                        "footer footer footer";
   //min-width:764px;
-  //width:100%;
+  width:100%;
 }
 #header{
   grid-area:header;

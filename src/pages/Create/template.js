@@ -1,7 +1,7 @@
 import blog from '@/api/blog'
 
 export default {
-  data() {
+  data () {
     return {
       title: '',
       description: '',
@@ -9,12 +9,11 @@ export default {
       atIndex: false
     }
   },
+
   methods: {
     onCreate() {
-      blog.createBlog(
-        {title: this.title, content: this.content,
-          description: this.description, atIndex: this.atIndex})
-        .then(res =>{
+      blog.createBlog({ title: this.title, content: this.content, description: this.description, atIndex: this.atIndex})
+        .then(res => {
           this.$message.success(res.msg)
           this.$router.push({ path: `/detail/${res.data.id}`})
         })

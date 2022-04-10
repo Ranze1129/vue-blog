@@ -117,6 +117,7 @@ header.login {
   align-items: center;
   background: rgb(244, 245, 245);
   box-shadow: 0 0 5px @bgColor;
+ // min-width: 640px;
   .el-icon-s-unfold::before{
     font-size: 38px;
     margin-right: 10px;
@@ -132,12 +133,15 @@ header.login {
     flex: 1;
     display: flex;
     align-items: center;
+    flex-wrap: nowrap;
   }
   h1 {
     margin: 0;
     padding: 0;
     font-size: 40px;
     text-transform: uppercase;
+    min-width: 264px;
+
     a {
       color: @bgColor;
     }

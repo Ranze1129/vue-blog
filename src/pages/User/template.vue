@@ -9,8 +9,8 @@
                    :key="blog.id" :to="`/detail/${blog.id}`">
         <div class="date">
           <span class="day">{{ splitDate(blog.createdAt).date }}</span>
-          <span class="month">{{ splitDate(blog.createdAt).month }}</span>
-          <span class="year">{{ splitDate(blog.createdAt).year }}</span>
+          <span class="month">{{ splitDate(blog.createdAt).month }}月</span>
+          <span class="year">{{ splitDate(blog.createdAt).year }}年</span>
         </div>
         <h3>{{ blog.title }}</h3>
         <p>{{ blog.description }}</p>

@@ -41,6 +41,10 @@ const router =  new Router({
     {
       path: '/register',
       component: () => import('@/pages/Register/template.vue')
+    },
+    {
+      path: '*',
+      component: () => import('@/pages/Notfound')
     }
   ]
 })

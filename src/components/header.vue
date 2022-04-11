@@ -117,7 +117,6 @@ header.login {
   align-items: center;
   background: rgb(244, 245, 245);
   box-shadow: 0 0 5px @bgColor;
- // min-width: 640px;
   .el-icon-s-unfold::before{
     font-size: 38px;
     margin-right: 10px;
@@ -151,7 +150,7 @@ header.login {
     color: #7d7c7c;
     padding: 2px 24px;
     &:hover {
-      color: #0acd0a;
+      color: #0aad0a;
     }
   }
   .edit {

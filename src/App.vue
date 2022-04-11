@@ -32,8 +32,6 @@ export default {
   grid-template-areas: "header header header"
                        ".      main   ."
                        "footer footer footer";
-  //min-width:764px;
-  width:100%;
 }
 #header{
   grid-area:header;

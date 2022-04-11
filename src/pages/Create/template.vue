@@ -3,13 +3,13 @@
     <h1>创建文章</h1>
     <h3>文章标题</h3>
     <el-input v-model="title"></el-input>
-    <p class="msg">10个字以上</p>
+    <p class="msg">{{title.length}}/10个字以上</p>
     <h3>内容简介</h3>
     <el-input type="textarea" v-model="description"  :autosize="{ minRows: 2, maxRows: 6}"></el-input>
-    <p class="msg">30个字以上</p>
+    <p class="msg">{{description.length}}/30个字以上</p>
     <h3>文章内容</h3>
     <el-input type="textarea" v-model="content" :autosize="{ minRows: 4, maxRows: 30}"></el-input>
-    <p class="msg">200个字以上</p>
+    <p class="msg">{{content.length}}/200个字以上</p>
     <p>
       <label>是否展示到首页</label>
       <el-switch v-model="atIndex" active-color="#13ce66" inactive-color="#ff4949"></el-switch>

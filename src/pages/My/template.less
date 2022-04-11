@@ -74,10 +74,15 @@
     justify-items: center;
     margin-bottom: 30px;
   }
-  ::v-deep {
-    .pagination {
-      .el-pager li {
-        &.active {
+    .pagination{
+      .el-icon{
+        color: rgb(55, 49, 70);
+        &:hover {
+          color: #0acd0a;
+        }
+      }
+      .el-pager li{
+        &.active{
           color: @themeColor;
         }
         &:hover {
@@ -85,7 +90,7 @@
         }
       }
     }
-  }
+
 }
 
 

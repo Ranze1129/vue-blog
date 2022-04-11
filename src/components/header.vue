@@ -124,6 +124,7 @@ header.login {
   }
   .write {
     background: @bgColor;
+    color: white;
     > span {
       font-size: 16px;
     }

@@ -30,6 +30,11 @@
       grid-row: 1;
       word-wrap:break-word;
       word-break:break-all;
+      overflow: hidden;
+      -webkit-line-clamp: 3;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
 
       &>span {
         color: @textLighterColor;
@@ -44,6 +49,11 @@
       margin-top: 0;
       word-wrap:break-word;
       word-break:break-all;
+      overflow: hidden;
+      -webkit-line-clamp: 8;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
     }
 
   }

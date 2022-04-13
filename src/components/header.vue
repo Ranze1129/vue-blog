@@ -111,6 +111,12 @@ header.no-login {
     color: @bgColor;
     background-color: #d2fcc8;
   }
+  @media (max-width: 500px) {
+    .titleName{
+      padding: 0;
+      font-size: 26px;
+    }
+  }
 }
 header.login {
   display: flex;
@@ -187,11 +193,14 @@ header.login {
           background-color: #eaeaea;
         }
       }
-
     }
-
     &:hover ul {
       display: block;
+    }
+  }
+  @media (max-width: 500px) {
+    h1 {
+      display: none;
     }
   }
 }

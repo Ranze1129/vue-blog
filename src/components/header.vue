@@ -80,7 +80,8 @@ export default {
 @import "../assets/base.less";
 header.no-login {
   padding: 0 12% 30px 12%;
-  background: @bgColor;
+  background: linear-gradient(45deg, rgba(203,238,81,1) 0%, rgba(125,213,55,1) 50%, rgba(35,200,16,1) 100%);
+  box-shadow: 0 0 10px #7DD537FF;
   display: grid;
   justify-items: center;
   position: relative;
@@ -121,8 +122,9 @@ header.no-login {
 header.login {
   display: flex;
   align-items: center;
-  background: rgb(244, 245, 245);
-  box-shadow: 0 0 5px @bgColor;
+ // background: rgb(244, 245, 245);
+  background: linear-gradient(45deg, rgba(237,238,81,1) 0%, rgba(219,233,34,1) 35%, rgba(86,238,18,1) 100%);
+  box-shadow: 0 0 6px #a2e922;
   .el-icon-s-unfold::before{
     font-size: 38px;
     margin-right: 10px;
